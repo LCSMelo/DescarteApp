@@ -58,7 +58,7 @@ fun ListaScreen(navController: NavController) {
                         )
                         Spacer(modifier = Modifier.height(4.dp))
                         Text(
-                            text = "Rua Jesus Nazareno, 1933",
+                            text = "Rua Jesus Nazareno, 1933, São Paulo - SP",
                             fontSize = 14.sp,
                             color = Color.Gray
                         )
@@ -70,7 +70,7 @@ fun ListaScreen(navController: NavController) {
                         )
                         Button(
                             onClick = {
-                                navController.navigate("mapscreen")
+                                navController.navigate("mariascreen")
                             },
                             colors = ButtonDefaults.buttonColors(Color.White)
                         ) {
@@ -103,7 +103,7 @@ fun ListaScreen(navController: NavController) {
                             )
                             Spacer(modifier = Modifier.height(4.dp))
                             Text(
-                                text = "Rua do Passáro Amarelo Gigante, 356",
+                                text = "Rua do Passáro Amarelo Gigante, 356 - São Paulo - SP",
                                 fontSize = 14.sp,
                                 color = Color.Gray
                             )
@@ -115,7 +115,7 @@ fun ListaScreen(navController: NavController) {
                             )
                             Button(
                                 onClick = {
-                                    navController.navigate("mapscreen")
+                                    navController.navigate("sesamoscreen")
                                 },
                                 colors = ButtonDefaults.buttonColors(Color.White)
                             ) {

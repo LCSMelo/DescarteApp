@@ -12,25 +12,18 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-//import br.com.fiap.meulixaum.screen.DescricaoItem
-//import br.com.fiap.meulixaum.screen.DescricaoItem
 import br.com.fiap.meulixaum.screen.ListaScreen
-import br.com.fiap.meulixaum.ui.theme.MeuLixaumTheme
 import br.com.fiap.meulixaum.screen.LoginScreen
-import br.com.fiap.meulixaum.screen.MapScreen
+import br.com.fiap.meulixaum.screen.MariaScreen
+import br.com.fiap.meulixaum.screen.SesamoScreen
+import br.com.fiap.meulixaum.ui.theme.MeuLixaumTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
 
-//            val navController = rememberNavController()
-//            NavHost(navController = navController, startDestination = "listaScreen") {
-//                composable("listaScreen") { ListaScreen() }
-//                composable("mapScreen") { MapScreen(navController, nome!!, idade!!) }
-//            }
-            MeuLixaumTheme{
-                // A surface container using the 'background' color from the theme
+            MeuLixaumTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
@@ -57,38 +50,15 @@ class MainActivity : ComponentActivity() {
                         }
                         composable(route = "lista") {
                             ListaScreen(navController)
-//                            DescricaoItem(navController)
                         }
-                        composable(route = "mapscreen") {
-                            MapScreen()
+                        composable(route = "mariascreen") {
+                            MariaScreen()
                         }
-//                        composable(
-//                            route = "perfil/{nome}/{idade}",
-//                            arguments = listOf(
-//                                navArgument(name = "nome") {
-//                                    type = NavType.StringType
-//                                },
-//                                navArgument(name = "idade") {
-//                                    type = NavType.IntType
-//                                }
-//                            )
-//                        ) {
-////                            val nome = it.arguments?.getString("nome")
-////                            PerfilScreen(navController, nome!!) // chama-se doublebang
-//                            val nome = it.arguments?.getString("nome")
-//                            val idade = it.arguments?.getInt("idade")
-//                            MapScreen() // chama-se doublebang
-//                        }
-//                        composable(
-//                            route = "pedidos?numero={numero}",
-//                            arguments = listOf(navArgument(name = "numero") {
-//                                defaultValue = "sem valor"
-//                            })
-//                        ) {
-////                            PedidosScreen(navController, it.arguments?.getString("numero")!!)
-//                        }
-                    }
+                        composable(route = "sesamoscreen") {
+                            SesamoScreen()
+                        }
 
+                    }
                 }
             }
         }

@@ -38,7 +38,7 @@ fun MapScreen() {
 }
 
 @Composable
-fun MapContent() {
+private fun MapContent() {
     Text(
         text = "Mapa aqui",
         fontSize = 16.sp,

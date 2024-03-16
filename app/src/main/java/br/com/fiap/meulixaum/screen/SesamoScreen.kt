@@ -25,6 +25,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -37,7 +38,7 @@ import br.com.fiap.meulixaum.R
 
 @Composable
 fun SesamoScreen() {
-    Surface(color = Color.White) {
+    Surface(color = colorResource(id = R.color.primary)) {
         Column(
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Top,
@@ -46,7 +47,7 @@ fun SesamoScreen() {
             Text(
                 text = "Informações",
                 fontSize = 30.sp,
-                color = Color.Black,
+                color = Color.White,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(top = 12.dp, bottom = 4.dp)
             )
@@ -55,7 +56,7 @@ fun SesamoScreen() {
                     .fillMaxSize()
                     .padding(10.dp)
                     .align(Alignment.CenterHorizontally),
-                color = Color(0xFFD4E9D6),
+                color = colorResource(id = R.color.primary),
                 shape = RoundedCornerShape(8.dp),
                 border = BorderStroke(width = 4.dp, color = Color.Black)
             ) {
@@ -126,7 +127,7 @@ fun SesamoScreen() {
                                 .padding(8.dp),
                             border = BorderStroke(
                                 1.dp,
-                                color = Color.Gray
+                                color = colorResource(id = R.color.primary)
                             )
                         ) {
                             Text(

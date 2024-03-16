@@ -9,11 +9,12 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import br.com.fiap.meulixaum.screen.ListaScreen
-import br.com.fiap.meulixaum.screen.LoginScreen
+import br.com.fiap.meulixaum.screen.EcycleScreen
 import br.com.fiap.meulixaum.screen.MariaScreen
 import br.com.fiap.meulixaum.screen.SesamoScreen
 import br.com.fiap.meulixaum.ui.theme.MeuLixaumTheme
@@ -26,7 +27,8 @@ class MainActivity : ComponentActivity() {
             MeuLixaumTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+//                    color = MaterialTheme.colorScheme.background
+                    color = Color.White
                 ) {
                     val navController = rememberNavController()
                     NavHost(
@@ -46,7 +48,7 @@ class MainActivity : ComponentActivity() {
                         }
                     ) {
                         composable(route = "login") {
-                            LoginScreen(navController)
+                            EcycleScreen(navController)
                         }
                         composable(route = "lista") {
                             ListaScreen(navController)

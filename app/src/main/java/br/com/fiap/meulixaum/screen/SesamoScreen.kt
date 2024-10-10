@@ -135,7 +135,7 @@ fun SesamoScreen() {
                         }
                         Text(
                             text = "*Resíduos da construção civil: tábuas, tijolos, telhas, tubulações, piso, lata de tinta vazia\n" +
-                                    "**Poda e jardinagem: folhas e galhos\n" +
+                                    "**Poda e jardinagem: folhas, galhos e pequenas mudas\n" +
                                     "***Recicláveis: papel, plástico, vidro, metal e isopor",
                             fontSize = 14.sp,
                             color = Color.Black,
